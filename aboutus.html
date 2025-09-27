@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My profile 04</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+    body {
+      background-color: #000;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Inter;
+      box-sizing: border-box;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+      align-items: center;
+      padding: 25px 60px;
+    }
+    header h1 {
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      margin-right: 5px;
+      font-family: Inter;
+    }
+    nav {
+      display: flex;
+      gap: 250px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      position: relative;
+      font-family: Inter;
+    }
+    nav a.active {
+      color: #f4c842;
+    }
+    nav a:hover {
+      color: #f4c842;
+    }
+    header .talk-btn {
+      background: none;
+      border: 1px solid #fff;
+      padding: 8px 18px;
+      border-radius: 25px;
+      color: #ffffff;
+      font-size: 20px;
+      cursor: pointer;
+      font-family: Inter;
+    }
+    header .talk-btn:hover {
+      color: #f4c842;
+    }
+    .about-section {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #000000;
+      color: #ffffff;
+      padding: 80px 60px;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .about-left {
+      flex: 1 1 40%;
+      text-align: center;
+    }
+
+    .about-left h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-family: Lora;
+    }
+
+    .about-left img {
+      width: 220px;
+      max-width: 100%;
+    }
+
+    .about-right {
+      flex: 1 1 50%;
+      max-width: 600px;
+    }
+
+    .about-right h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .about-right p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      font-family: Inter;
+    }
+
+    .btn-cv {
+      display: inline-block;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cv:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>"Woraprat" SAU</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./aboutus.html" class="active">About</a>
+        <a href="./portfolio.html">Portfolio</a>
+      </nav>
+      <a href="./contact.html"> <button class="talk-btn">Let's talk</button></a>
+    </header>
+
+    <section class="about-section">
+      <div class="about-left">
+        <h2>About Me</h2>
+        <img src="./Image/load.png" alt="About Logo" />
+      </div>
+
+      <div class="about-right">
+        <h3>
+          Hi, I’m Woraprat SAU. A passionate Front-end Web Developer based in
+          Thailand.
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt rem
+          odit labore unde nemo omnis sequi hic sit laudantium repellendus
+          recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+          consequuntur velit nesciunt aperiam odit excepturi repellat libero in
+          enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+          voluptatem quam distinctio minus saepe nobis nulla amet fugiat sit
+          autem deserunt asperiores vitae ea, libero sequi! Libero fugit non,
+          placeat nulla quae odio asperiores ratione! Accusantium placeat
+          dolorem minus eos excepturi modi.
+        </p>
+
+        <a href="#" class="btn-cv">Download CV</a>
+      </div>
+    </section>
+  </body>
+</html>

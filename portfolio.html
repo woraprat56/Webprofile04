@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My profile 04</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monomaniac+One&family=Noto+Sans+Thai:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Monomaniac+One&family=Noto+Sans+Thai:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sansita+Swashed:wght@300..900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: inter;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        align-items: center;
+        padding: 25px 60px;
+      }
+      header h1 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        margin-right: 5px;
+      }
+      nav {
+        display: flex;
+        gap: 250px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        position: relative;
+      }
+      nav a.active {
+        color: #f4c842;
+      }
+      nav a:hover {
+        color: #f4c842;
+      }
+      header .talk-btn {
+        background: none;
+        border: 1px solid #fff;
+        padding: 8px 18px;
+        border-radius: 25px;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      section.portfolio {
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 40px;
+      }
+      .portfolio h2 {
+        font-size: 50px;
+        margin-bottom: 40px;
+      }
+      .portfolio-content {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+      }
+      .portfolio-content img {
+        width: 450px;
+        border-radius: 20px;
+      }
+      .portfolio-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        max-width: 600px;
+      }
+      .portfolio-text h3 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .portfolio-text p {
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 25px;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 10px;
+      }
+      .view-btn {
+        background: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 7px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .view-btn:hover {
+        background: #fff;
+        color: #000;
+      }
+      .git-icon {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .git-icon:hover {
+        color: #f4c842;
+      }
+      .new-portfolio-section {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+        color: #fff;
+      }
+      .new-portfolio-wrapper {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+      }
+      .new-portfolio-image {
+        width: 450px;
+        border-radius: 20px;
+      }
+      .new-portfolio-text {
+        max-width: 550px;
+        text-align: center;
+      }
+      .new-portfolio-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .new-portfolio-desc {
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 25px;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .new-portfolio-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 10px;
+      }
+      .new-view-btn {
+        background: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 7px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .new-view-btn:hover {
+        background: #fff;
+        color: #000;
+      }
+      .new-git-btn {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .new-git-btn i {
+        font-size: 35px;
+      }
+      .new-git-btn:hover {
+        color: #f4c842;
+      }
+      .animex-section {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+        color: #fff;
+      }
+      .animex-wrapper {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+      }
+      .animex-image {
+        width: 450px;
+        border-radius: 20px;
+      }
+      .animex-text {
+        max-width: 550px;
+        text-align: center;
+      }
+      .animex-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .animex-desc {
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 25px;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .animex-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 10px;
+      }
+      .animex-view-btn {
+        background: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 7px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .animex-view-btn:hover {
+        background: #fff;
+        color: #000;
+      }
+      .animex-git-btn {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .animex-git-btn i {
+        font-size: 35px;
+      }
+      .animex-git-btn:hover {
+        color: #f4c842;
+      }
+      .techz-section {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 40px;
+        color: #fff;
+      }
+      .techz-wrapper {
+        display: flex;
+        gap: 60px;
+        align-items: flex-start;
+      }
+      .techz-image {
+        width: 450px;
+        border-radius: 20px;
+      }
+      .techz-text {
+        max-width: 550px;
+        text-align: center;
+      }
+      .techz-title {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      .techz-desc {
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 25px;
+        font-size: 15px;
+        text-align: justify;
+      }
+      .techz-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 10px;
+      }
+      .techz-view-btn {
+        background: none;
+        color: #fff;
+        border: 1px solid #fff;
+        padding: 7px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+      .techz-view-btn:hover {
+        background: #fff;
+        color: #000;
+      }
+      .techz-git-btn {
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .techz-git-btn i {
+        font-size: 35px;
+      }
+      .techz-git-btn:hover {
+        color: #f4c842;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Woraprat SAU</h1>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./aboutus.html">About</a>
+        <a href="./portfolio.html" class="active">Portfolio</a>
+      </nav>
+      <a href="./contact.html"> <button class="talk-btn">Let's talk</button></a>
+    </header>
+    <section class="portfolio">
+      <h2 style="font-family: Lora">Portfolio</h2>
+      <div class="portfolio-content">
+        <img src="./Image/photo04-01.png" alt="Portfolio Image" />
+        <div class="portfolio-text">
+          <h3 style="font-family: Lora">Bikes and Beards</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem necessitatibus quod rerum est nobis odio? Quae,
+            aliquid perferendis. Aliquam, perspiciatis aperiam facere maxime
+            consequuntur saepe suscipit eaque mollitia cupiditate corporis illum
+            iure ullam natus dolorum qui officiis, earum quam consectetur error,
+            alias inventore pariatur! Qui explicabo dolores sunt omnis velit
+            voluptate error pariatur. Consectetur fuga numquam molestiae
+            repellendus maiores omnis vitae reprehenderit ex perspiciatis
+            possimus eum, tempora odit accusantium dolore natus molestias fugit
+            labore! Perspiciatis minus enim sed quasi corrupti!
+          </p>
+          <div class="buttons">
+            <a href="#" class="view-btn">View</a>
+            <a href="#" class="git-icon"
+              ><i style="font-size: 35px" class="fa-brands fa-github"></i> Git
+              code</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br /><br /><br /><br />
+    <section class="new-portfolio-section">
+      <div class="new-portfolio-wrapper">
+        <div class="new-portfolio-text">
+          <h3 class="new-portfolio-title" style="font-family: Lora">
+            Learnify
+          </h3>
+          <p class="new-portfolio-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            magnam harum, consectetur ut doloribus accusantium et at fugiat
+            eaque facilis excepturi illo voluptatibus vitae ab laborum
+            reiciendis hic consequatur minus repellendus porro commodi numquam
+            amet eveniet. Rem ullam accusantium nostrum aliquam eligendi, itaque
+            quo exercitationem necessitatibus eveniet mollitia nam nihil
+            explicabo illo totam unde minus id neque excepturi omnis harum,
+            incidunt nemo eum, voluptas rerum. Et aliquam iusto dolores, earum
+            eius ratione? Voluptas possimus voluptate illo non magni voluptatem
+            accusantium?
+          </p>
+          <div class="new-portfolio-buttons">
+            <a href="#" class="new-view-btn">View</a>
+            <a href="#" class="new-git-btn"
+              ><i class="fa-brands fa-github"></i> Git code</a
+            >
+          </div>
+        </div>
+        <img
+          src="./Image/photo04-02.png"
+          alt="Learnify Image"
+          class="new-portfolio-image"
+        />
+      </div>
+    </section>
+    <br /><br /><br /><br /><br /><br />
+    <section class="animex-section">
+      <div class="animex-wrapper">
+        <img
+          src="./Image/photo04-03.png"
+          alt="Anime-X Image"
+          class="animex-image"
+        />
+        <div class="animex-text">
+          <h3 class="animex-title" style="font-family: Lora">Anime-X</h3>
+          <p class="animex-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            quisquam at quia ut asperiores inventore eligendi, cumque soluta
+            eveniet exercitationem dolor facilis, totam unde voluptatibus autem
+            hic odit omnis maiores id dicta repellendus consectetur neque! Harum
+            aperiam aliquam deserunt. Velit exercitationem assumenda quae quas,
+            eligendi hic natus vitae quasi aliquam magni provident incidunt
+            recusandae at, iusto obcaecati architecto ut minima? Dolor commodi
+            distinctio cumque. Quia officiis quo quas culpa corrupti quod
+            tenetur blanditiis officia omnis impedit, nihil similique qui esse.
+          </p>
+          <div class="animex-buttons">
+            <a href="#" class="animex-view-btn">View</a>
+            <a href="#" class="animex-git-btn">
+              <i class="fa-brands fa-github"></i> Git code
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br /><br /><br /><br /><br /><br />
+    <section class="techz-section">
+      <div class="techz-wrapper">
+        <div class="techz-text">
+          <h3 class="techz-title" style="font-family: Lora">Tech-Z</h3>
+          <p class="techz-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            rem odit labore unde nemo omnis sequi hic sit laudantium repellendus
+            recusandae vitae ea laborum, ipsa nisi eos autem. Blanditiis
+            consequuntur velit nesciunt aperiam odit excepturi repellat libero
+            in enim praesentium! Ex dicta est suscipit ipsam voluptate tempora
+            voluptatum quam distinctio minus saepe nobis nulla amet fugiat sit
+            autem deserunt asperiores vitae ea, libero sed! Libero fugit non,
+            placeat nulla quae odio asperiores ratione! Accusantium placeat
+            dolorem minus eos excepturi modi.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Nesciunt rem odit.
+          </p>
+          <div class="techz-buttons">
+            <a href="#" class="techz-view-btn">View</a>
+            <a href="#" class="techz-git-btn">
+              <i class="fa-brands fa-github"></i> Git code
+            </a>
+          </div>
+        </div>
+        <img
+          src="./Image/photo04-04.png"
+          alt="Tech-Z Image"
+          class="techz-image"
+        />
+      </div>
+    </section>
+  </body>
+</html>
